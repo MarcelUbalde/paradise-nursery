@@ -1,10 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos base personalizados */
+
+/* ==== Base ==== */
+:root {
+  color-scheme: light;
+}
+
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+
+/* ==== Componentes reutilizables ==== */
+@layer components {
+  .container-main {
+    @apply mx-auto max-w-7xl px-4;
+  }
+
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm hover:shadow-md px-5 py-3;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-100 text-gray-800 hover:bg-gray-200 shadow-sm px-5 py-3;
+  }
+
+  .btn-ghost {
+    @apply btn text-emerald-700 hover:bg-emerald-50 px-4 py-2;
+  }
+
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  .chip-emerald {
+    @apply chip bg-emerald-500/10 text-emerald-700 border border-emerald-400/20;
+  }
+}
+
+
+/* ==== Accesibilidad & focus ==== */
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:rounded-lg;
+  }
 }
