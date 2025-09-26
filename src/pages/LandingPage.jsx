@@ -4,32 +4,35 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Imagen de fondo con overlay */}
+      {/* Imagen de fondo con overlay mejorado */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&h=1080&fit=crop&crop=center')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop&crop=center')`
         }}
       />
       
       {/* Contenido principal */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
           {/* Logo/Título */}
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight">
+          <div className="mb-10">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-none">
               🌿 Paradise Nursery
             </h1>
-            <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
+            <div className="w-32 h-1 bg-green-500 mx-auto rounded-full"></div>
           </div>
           
-          {/* Párrafo de introducción */}
+          {/* Párrafo sobre la empresa */}
           <div className="mb-12">
-            <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto">
-              Descubre el paraíso verde que siempre soñaste. En Paradise Nursery encontrarás las 
-              plantas más hermosas y saludables para transformar tu hogar en un oasis natural. 
-              Desde elegantes plantas de interior hasta aromáticas hierbas, tenemos todo lo que 
-              necesitas para crear tu jardín perfecto.
+            <h2 className="text-2xl md:text-3xl text-green-100 font-semibold mb-6">
+              Plantas que transforman tu hogar
+            </h2>
+            <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto">
+              Bienvenido a Paradise Nursery, tu destino especializado en plantas de interior y exterior. 
+              Ofrecemos una cuidadosa selección de plantas saludables, desde suculentas resistentes hasta 
+              exuberantes plantas tropicales, todas escogidas para prosperar en tu hogar y crear ese 
+              ambiente natural que tanto deseas.
             </p>
           </div>
           
@@ -37,9 +40,9 @@ const LandingPage = () => {
           <div className="mb-16">
             <Link 
               to="/products"
-              className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center bg-green-600 text-white px-10 py-4 rounded-2xl font-bold text-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-green-500/25"
             >
-              <span>Get Started</span>
+              <span>Comenzar</span>
               <svg 
                 className="ml-2 w-5 h-5" 
                 fill="none" 
