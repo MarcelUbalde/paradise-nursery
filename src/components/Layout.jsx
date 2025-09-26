@@ -8,16 +8,16 @@ const Layout = ({ children }) => {
       <main className="flex-1">
         {children}
       </main>
-      <footer className="bg-gray-800 text-white py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white py-12 mt-16">
+        <div className="container-main">
           <div className="text-center">
-            <h3 className="text-lg font-semibold mb-2">🌿 Paradise Nursery</h3>
-            <p className="text-gray-300 text-sm">
+            <h3 className="text-xl font-semibold mb-3">🌿 Paradise Nursery</h3>
+            <p className="text-gray-300 text-sm mb-6">
               Tu destino para las mejores plantas y accesorios de jardinería
             </p>
-            <div className="mt-4 flex justify-center space-x-6 text-sm text-gray-400">
+            <div className="flex justify-center items-center space-x-4 text-sm text-gray-400">
               <span>© 2025 Paradise Nursery</span>
-              <span>•</span>
+              <span className="w-1 h-1 bg-gray-500 rounded-full"></span>
               <span>Hecho con ❤️ para amantes de las plantas</span>
             </div>
           </div>
