@@ -4,50 +4,47 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Imagen de fondo con overlay mejorado */}
+      {/* Imagen de fondo con overlay oscuro */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop&crop=center')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&h=1080&fit=crop&crop=center')`
         }}
       />
       
       {/* Contenido principal */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
-          {/* Logo/Título */}
-          <div className="mb-10">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-none">
+        <div className="mx-auto max-w-6xl px-4 text-center">
+          {/* Nombre de la empresa */}
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
               🌿 Paradise Nursery
             </h1>
-            <div className="w-32 h-1 bg-green-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
           </div>
           
-          {/* Párrafo sobre la empresa */}
-          <div className="mb-12">
-            <h2 className="text-2xl md:text-3xl text-green-100 font-semibold mb-6">
-              Plantas que transforman tu hogar
-            </h2>
-            <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed max-w-4xl mx-auto">
-              Bienvenido a Paradise Nursery, tu destino especializado en plantas de interior y exterior. 
-              Ofrecemos una cuidadosa selección de plantas saludables, desde suculentas resistentes hasta 
-              exuberantes plantas tropicales, todas escogidas para prosperar en tu hogar y crear ese 
-              ambiente natural que tanto deseas.
+          {/* Párrafo descriptivo */}
+          <div className="mb-10">
+            <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto">
+              Descubre nuestra cuidadosa selección de plantas de interior y exterior. 
+              Desde suculentas resistentes hasta exuberantes plantas tropicales, 
+              todas escogidas para transformar tu hogar en un oasis natural.
             </p>
           </div>
           
-          {/* Botón de acción */}
-          <div className="mb-16">
+          {/* Botón Get Started */}
+          <div>
             <Link 
               to="/products"
-              className="inline-flex items-center bg-green-600 text-white px-10 py-4 rounded-2xl font-bold text-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-green-500/25"
+              className="inline-flex items-center bg-emerald-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-emerald-700 transform hover:scale-105 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50"
             >
-              <span>Comenzar</span>
+              <span>Get Started</span>
               <svg 
                 className="ml-2 w-5 h-5" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path 
                   strokeLinecap="round" 
@@ -58,41 +55,14 @@ const LandingPage = () => {
               </svg>
             </Link>
           </div>
-          
-          {/* Características destacadas */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl mb-3">🌱</div>
-              <h3 className="text-white font-semibold text-lg mb-2">Plantas Premium</h3>
-              <p className="text-white/80 text-sm">
-                Selección cuidadosa de las mejores especies para tu hogar
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl mb-3">🚀</div>
-              <h3 className="text-white font-semibold text-lg mb-2">Envío Rápido</h3>
-              <p className="text-white/80 text-sm">
-                Entrega segura y rápida directamente a tu puerta
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl mb-3">💚</div>
-              <h3 className="text-white font-semibold text-lg mb-2">Cuidado Expert</h3>
-              <p className="text-white/80 text-sm">
-                Consejos y guías para mantener tus plantas saludables
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       
       {/* Indicador de scroll */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
-        </div>
+        <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </div>
   );
