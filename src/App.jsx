@@ -3,12 +3,9 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import Layout from './components/Layout';
 
-
-// Páginas
 import LandingPage from './pages/LandingPage';
 import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
-
 
 function App() {
   return (
@@ -16,11 +13,8 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Routes>
-            {/* Landing sin layout */}
             <Route path="/" element={<LandingPage />} />
 
-
-            {/* Con layout */}
             <Route
               path="/products"
               element={

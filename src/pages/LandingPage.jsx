@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
     return (
         <div className="hero-container">
-            {/* Imagen de fondo */}
             <div className="hero-bg" />
 
             <div className="hero-content">

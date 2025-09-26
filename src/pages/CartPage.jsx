@@ -12,7 +12,6 @@ const CartPage = () => {
     clearCart 
   } = useCart();
 
-  // Formatear precio en EUR
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-ES', { 
       style: 'currency', 
@@ -20,7 +19,6 @@ const CartPage = () => {
     }).format(price);
   };
 
-  // Función para manejar el cambio de cantidad
   const handleQuantityChange = (productId, newQuantity) => {
     if (newQuantity < 1) {
       removeFromCart(productId);
@@ -29,7 +27,6 @@ const CartPage = () => {
     }
   };
 
-  // Función para manejar el checkout (simulado)
   const handleCheckout = () => {
     if (items.length === 0) {
       alert('Tu carrito está vacío');
@@ -40,7 +37,6 @@ const CartPage = () => {
     clearCart();
   };
 
-  // Estado vacío del carrito
   if (items.length === 0) {
     return (
       <div className="page-container">
@@ -75,7 +71,7 @@ const CartPage = () => {
   return (
     <div className="page-container">
       <div className="container-main">
-        {/* Header de la página */}
+
         <div className="page-header">
           <h1 className="page-title">Carrito de Compras</h1>
           <p className="page-subtitle">
@@ -84,12 +80,12 @@ const CartPage = () => {
         </div>
 
         <div className="cart-container">
-          {/* Lista de productos */}
+
           <div className="cart-items">
             {items.map(item => (
               <div key={item.id} className="cart-item">
                 <div className="cart-item-content">
-                  {/* Imagen del producto */}
+
                   <img 
                     src={item.image} 
                     alt={item.name}
@@ -97,7 +93,7 @@ const CartPage = () => {
                     className="cart-item-image"
                   />
                   
-                  {/* Información del producto */}
+
                   <div className="cart-item-details">
                     <div className="cart-item-header">
                       <div>
@@ -105,7 +101,7 @@ const CartPage = () => {
                         <p className="cart-item-category">{item.categoryName}</p>
                       </div>
                       
-                      {/* Precio unitario */}
+
                       <div style={{ textAlign: 'right' }}>
                         <div className="cart-item-price">
                           {formatPrice(item.price)}
@@ -113,7 +109,7 @@ const CartPage = () => {
                       </div>
                     </div>
 
-                    {/* Controles de cantidad y botón eliminar */}
+
                     <div className="cart-item-controls">
                       <div className="quantity-controls">
                         <span className="quantity-label">Cantidad:</span>
@@ -138,7 +134,7 @@ const CartPage = () => {
                         </div>
                       </div>
 
-                      {/* Subtotal y eliminar */}
+
                       <div className="cart-item-actions">
                         <div className="item-subtotal">
                           <div className="subtotal-amount">
@@ -163,7 +159,7 @@ const CartPage = () => {
             ))}
           </div>
 
-          {/* Resumen de compra */}
+
           <div className="cart-summary">
             <h2 className="summary-title">Resumen del Pedido</h2>
             
@@ -205,7 +201,7 @@ const CartPage = () => {
               </button>
             </div>
 
-            {/* Información de confianza */}
+
             <div className="trust-info">
               <div className="trust-badges">
                 <div className="trust-badge">

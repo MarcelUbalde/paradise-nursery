@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
-// Acciones del carrito
 const CART_ACTIONS = {
     ADD_ITEM: 'ADD_ITEM',
     REMOVE_ITEM: 'REMOVE_ITEM',
@@ -9,14 +8,12 @@ const CART_ACTIONS = {
     LOAD_CART: 'LOAD_CART',
 };
 
-// Estado inicial
 const initialCartState = {
     items: [],
     totalItems: 0,
     totalAmount: 0,
 };
 
-// Helpers
 const calculateTotals = (items) => {
     const totalItems = items.reduce((t, i) => t + i.quantity, 0);
     const totalAmount = items.reduce((t, i) => t + i.price * i.quantity, 0);
@@ -38,7 +35,6 @@ const loadFromLocalStorage = () => {
     }
 };
 
-// Reducer
 const cartReducer = (state, action) => {
     let newItems, totals;
 
@@ -88,17 +84,14 @@ const cartReducer = (state, action) => {
     }
 };
 
-// Context
 const CartContext = createContext(null);
 
-// Hook
 export const useCart = () => {
     const ctx = useContext(CartContext);
     if (!ctx) throw new Error('useCart debe ser usado dentro de un CartProvider');
     return ctx;
 };
 
-// Provider
 export const CartProvider = ({ children }) => {
     const [cartState, dispatch] = useReducer(cartReducer, initialCartState);
 
@@ -134,5 +127,4 @@ export const CartProvider = ({ children }) => {
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
-// Default export (opcional)
 export default CartContext;

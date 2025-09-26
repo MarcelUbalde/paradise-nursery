@@ -5,8 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* ==== Base ==== */
 :root {
   color-scheme: light;
 }
@@ -16,8 +14,6 @@ body {
   @apply bg-gray-50 text-gray-900 antialiased;
 }
 
-
-/* ==== Componentes reutilizables ==== */
 @layer components {
   .container-main {
     @apply mx-auto max-w-7xl px-4;
@@ -54,8 +50,6 @@ body {
   }
 }
 
-
-/* ==== Accesibilidad & focus ==== */
 @layer utilities {
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:rounded-lg;

@@ -6,7 +6,6 @@ import { plantsData, getCategories } from '../data/plants';
 const ProductCard = ({ product }) => {
   const { addToCart, isInCart } = useCart();
   
-  // Formatear precio en EUR
   const formatPrice = (price) => {
     return new Intl.NumberFormat('es-ES', { 
       style: 'currency', 
@@ -18,7 +17,6 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      {/* Imagen del producto */}
       <div className="product-image-container">
         <img 
           src={product.image} 
@@ -26,13 +24,11 @@ const ProductCard = ({ product }) => {
           loading="lazy"
           className="product-image"
         />
-        {/* Badge de categoría */}
         <div className="product-badge">
           {product.categoryName}
         </div>
       </div>
       
-      {/* Contenido de la tarjeta */}
       <div className="product-content">
         <div className="product-info">
           <h3 className="product-name">{product.name}</h3>
@@ -71,7 +67,6 @@ const ProductsPage = () => {
   const { totalItems } = useCart();
   const categories = getCategories();
 
-  // Agrupar productos por categoría
   const groupedProducts = categories.reduce((acc, category) => {
     const categoryProducts = plantsData.filter(product => product.category === category.slug);
     if (categoryProducts.length > 0) {
@@ -95,7 +90,6 @@ const ProductsPage = () => {
             </p>
           </div>
 
-          {/* Botón Ver carrito */}
           {totalItems > 0 && (
             <Link 
               to="/cart"
@@ -110,11 +104,9 @@ const ProductsPage = () => {
           )}
         </div>
 
-        {/* Productos agrupados por categoría */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
           {Object.values(groupedProducts).map(categoryGroup => (
             <div key={categoryGroup.slug} className="category-section">
-              {/* Título de categoría */}
               <div className="category-header">
                 <h2 className="category-title">
                   <span className="category-icon">{categoryGroup.icon}</span>
@@ -125,7 +117,6 @@ const ProductsPage = () => {
                 </p>
               </div>
 
-              {/* Grid de productos */}
               <div className="products-grid">
                 {categoryGroup.products.map(product => (
                   <ProductCard key={product.id} product={product} />
@@ -135,7 +126,6 @@ const ProductsPage = () => {
           ))}
         </div>
 
-        {/* Sección de confianza */}
         <div style={{ marginTop: '4rem', backgroundColor: 'white', borderRadius: '1rem', padding: '2rem', boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)', border: '1px solid #f3f4f6' }}>
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#111827', marginBottom: '0.5rem' }}>
