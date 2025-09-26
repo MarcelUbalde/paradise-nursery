@@ -23,6 +23,9 @@ const Header = () => {
             >
               🌿 Paradise Nursery
             </Link>
+            <div className="hidden md:block">
+              <p className="text-sm text-gray-600 italic">Plantas que transforman tu hogar</p>
+            </div>
             
             <nav className="hidden md:flex space-x-6">
               <Link 
@@ -48,7 +51,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link 
               to="/cart" 
-              className="relative p-2 text-gray-700 hover:text-green-600 transition-colors rounded-lg hover:bg-green-50"
+              className="relative flex items-center space-x-2 p-2 text-gray-700 hover:text-green-600 transition-colors rounded-lg hover:bg-green-50"
               title="Ver carrito"
             >
               <span className="sr-only">Ver carrito</span>
@@ -65,6 +68,7 @@ const Header = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m2.5-5h10m0 0v6a1 1 0 01-1 1H8a1 1 0 01-1-1v-6m10 0V9a1 1 0 00-1-1H8a1 1 0 00-1-1v2" 
                 />
               </svg>
+              <span className="hidden sm:block text-sm font-medium">Carrito</span>
               
               {/* Badge con número de items */}
               {totalItems > 0 && (
