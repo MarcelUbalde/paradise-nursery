@@ -12,10 +12,10 @@ const ProductsPage = () => {
     : plantsData.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="container-main py-8">
       {/* Header de la página */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="title-page">
           Nuestras Plantas
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -26,13 +26,13 @@ const ProductsPage = () => {
 
       {/* Filtros por categoría */}
       <div className="mb-8">
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           <button
             onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+            className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
               selectedCategory === 'all'
-                ? 'bg-primary-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                ? 'bg-emerald-600 text-white shadow-lg'
+                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-emerald-300'
             }`}
           >
             Todas las plantas ({plantsData.length})
@@ -44,10 +44,10 @@ const ProductsPage = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.slug)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
                   selectedCategory === category.slug
-                    ? 'bg-primary-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                    ? 'bg-emerald-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-emerald-300'
                 }`}
               >
                 {category.name} ({categoryCount})
@@ -68,7 +68,7 @@ const ProductsPage = () => {
       </div>
 
       {/* Grid de productos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid-products">
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
