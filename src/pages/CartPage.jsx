@@ -43,7 +43,7 @@ const CartPage = () => {
   // Estado vacío del carrito
   if (items.length === 0) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-16">
+      <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="text-center">
           <div className="text-gray-400 text-8xl mb-6">🛒</div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -67,7 +67,7 @@ const CartPage = () => {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
+    <div className="mx-auto max-w-7xl px-4 py-8">
       {/* Header de la página con total destacado */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Tu Carrito</h1>

@@ -14,7 +14,7 @@ const LandingPage = () => {
       
       {/* Contenido principal */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="mx-auto max-w-6xl px-4 text-center">
+        <div className="mx-auto max-w-7xl px-4 text-center">
           {/* Nombre de la empresa */}
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
