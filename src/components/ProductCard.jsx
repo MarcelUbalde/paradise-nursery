@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
         />
         {/* Badge de categoría */}
         <div className="absolute top-3 left-3">
-          <span className="bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+          <span className="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
             {product.categoryName}
           </span>
         </div>
@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
 
       {/* Información del producto */}
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
           {product.name}
         </h3>
         
@@ -52,9 +52,8 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Precio y botón */}
-        {/* Precio y botón */}
         <div className="flex items-center justify-between mt-4">
-          <div className="text-2xl font-bold text-emerald-600">
+          <div className="text-2xl font-bold text-green-600">
             ${product.price.toFixed(2)}
           </div>
           

@@ -31,8 +31,8 @@ const ProductsPage = () => {
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
               selectedCategory === 'all'
-                ? 'bg-emerald-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-emerald-300'
+                ? 'bg-green-600 text-white shadow-lg'
+                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-green-300'
             }`}
           >
             Todas las plantas ({plantsData.length})
@@ -46,8 +46,8 @@ const ProductsPage = () => {
                 onClick={() => setSelectedCategory(category.slug)}
                 className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
                   selectedCategory === category.slug
-                    ? 'bg-emerald-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-emerald-300'
+                    ? 'bg-green-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-green-300'
                 }`}
               >
                 {category.name} ({categoryCount})

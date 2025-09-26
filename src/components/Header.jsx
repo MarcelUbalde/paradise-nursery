@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex items-center space-x-8">
             <Link 
               to="/" 
-              className="text-2xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+              className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors"
             >
               🌿 Paradise Nursery
             </Link>
@@ -27,16 +27,16 @@ const Header = () => {
             <nav className="hidden md:flex space-x-6">
               <Link 
                 to="/products" 
-                className={`text-gray-700 hover:text-emerald-600 font-medium transition-colors ${
-                  location.pathname === '/products' ? 'text-emerald-600' : ''
+                className={`text-gray-700 hover:text-green-600 font-medium transition-colors ${
+                  location.pathname === '/products' ? 'text-green-600' : ''
                 }`}
               >
                 Productos
               </Link>
               <Link 
                 to="/cart" 
-                className={`text-gray-700 hover:text-emerald-600 font-medium transition-colors ${
-                  location.pathname === '/cart' ? 'text-emerald-600' : ''
+                className={`text-gray-700 hover:text-green-600 font-medium transition-colors ${
+                  location.pathname === '/cart' ? 'text-green-600' : ''
                 }`}
               >
                 Carrito
@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link 
               to="/cart" 
-              className="relative p-2 text-gray-700 hover:text-emerald-600 transition-colors rounded-lg hover:bg-emerald-50"
+              className="relative p-2 text-gray-700 hover:text-green-600 transition-colors rounded-lg hover:bg-green-50"
               title="Ver carrito"
             >
               <span className="sr-only">Ver carrito</span>
@@ -81,8 +81,8 @@ const Header = () => {
                   to="/products" 
                   className={`text-sm font-medium transition-colors ${
                     location.pathname === '/products' 
-                      ? 'text-emerald-600' 
-                      : 'text-gray-700 hover:text-emerald-600'
+                      ? 'text-green-600' 
+                      : 'text-gray-700 hover:text-green-600'
                   }`}
                 >
                   Productos
