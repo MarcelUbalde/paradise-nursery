@@ -7,7 +7,7 @@
 /* Estilos base personalizados */
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-200;
   }
   
   body {
