@@ -12,14 +12,14 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="header-blur">
+      <div className="container-main">
         <div className="flex justify-between items-center h-16">
           {/* Logo y navegación */}
           <div className="flex items-center space-x-8">
             <Link 
               to="/" 
-              className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              className="text-2xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
             >
               🌿 Paradise Nursery
             </Link>
@@ -27,16 +27,16 @@ const Header = () => {
             <nav className="hidden md:flex space-x-6">
               <Link 
                 to="/products" 
-                className={`text-gray-700 hover:text-primary-600 font-medium transition-colors ${
-                  location.pathname === '/products' ? 'text-primary-600' : ''
+                className={`text-gray-700 hover:text-emerald-600 font-medium transition-colors ${
+                  location.pathname === '/products' ? 'text-emerald-600' : ''
                 }`}
               >
                 Productos
               </Link>
               <Link 
                 to="/cart" 
-                className={`text-gray-700 hover:text-primary-600 font-medium transition-colors ${
-                  location.pathname === '/cart' ? 'text-primary-600' : ''
+                className={`text-gray-700 hover:text-emerald-600 font-medium transition-colors ${
+                  location.pathname === '/cart' ? 'text-emerald-600' : ''
                 }`}
               >
                 Carrito
@@ -48,9 +48,10 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link 
               to="/cart" 
-              className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors"
+              className="relative p-2 text-gray-700 hover:text-emerald-600 transition-colors rounded-lg hover:bg-emerald-50"
               title="Ver carrito"
             >
+              <span className="sr-only">Ver carrito</span>
               <svg 
                 className="w-6 h-6" 
                 fill="none" 
@@ -67,7 +68,7 @@ const Header = () => {
               
               {/* Badge con número de items */}
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="badge absolute -top-1 -right-1">
                   {totalItems > 99 ? '99+' : totalItems}
                 </span>
               )}
@@ -80,8 +81,8 @@ const Header = () => {
                   to="/products" 
                   className={`text-sm font-medium transition-colors ${
                     location.pathname === '/products' 
-                      ? 'text-primary-600' 
-                      : 'text-gray-700 hover:text-primary-600'
+                      ? 'text-emerald-600' 
+                      : 'text-gray-700 hover:text-emerald-600'
                   }`}
                 >
                   Productos
